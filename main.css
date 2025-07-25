@@ -1,0 +1,248 @@
+/*layout for the website*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #e4e4e4;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+main {
+  grid-area: main;
+  text-align: center;
+}
+
+aside {
+  grid-area: aside;
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #e4e4e4;
+  text-align: center;
+  width: 100vw;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+/*anchor tag styling*/
+a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 30px;
+  display: block;
+}
+
+/*hover effect for social media links*/
+.socials:hover {
+  text-decoration: underline;
+}
+
+/*hover effect for navigtaion bar*/
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #fdfdfd;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer */
+footer p:first-of-type {
+  margin-bottom: 10px;
+}
+
+footer a.socials {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: cursive;
+  padding: 20px 10px;
+}
+
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+
+/* Center the container */
+.about_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+/* Box styling */
+.about_me {
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Image styling */
+img {
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  align-items: center;
+  display: block;
+}
+
+
+/*Projects grid layout*/
+aside.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 10px 30px 50px;
+  justify-content: center;
+  margin-left: 3%;
+
+}
+
+.project {
+  background-color: #e4e4e4;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project img {
+  width: 50%;
+  display: block;
+  height: auto;
+  max-height: 100px;
+  margin-bottom: 5px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.project h4 {
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
+.project p {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+main h2.projects {
+  font-size: 1.8em;
+  font-family: cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 10px;
+}
