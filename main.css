@@ -263,3 +263,27 @@ main h2.projects {
   text-align: center;
   padding: 20px 10px;
 }
+
+
+/* Skills container */
+#container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #ffffff; 
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+/* Skill boxes */
+.skill {
+  position: absolute;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+  color: #222;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.05s linear;
+}
