@@ -208,7 +208,7 @@ img {
   margin: 2em;
   top: 7em;
   box-shadow: 0px 4px 12px black;
-  
+
 }
 
 
@@ -270,7 +270,7 @@ main h2.projects {
   position: relative;
   width: 800px;
   height: 500px;
-  background: #ffffff; 
+  background: #ffffff;
   overflow: hidden;
   margin: 50px auto;
   border: 2px solid #000000;
@@ -284,9 +284,57 @@ main h2.projects {
   border-radius: 10px;
   font-size: 16px;
   white-space: nowrap;
-  color: #222;  
+  color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid #000000;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.05s linear;
+}
+
+
+/* experience */
+
+/*Projects grid layout*/
+aside.experiences {
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 10px 30px 50px;
+  justify-content: center;
+  margin-left: 3%;
+
+}
+
+.experience {
+  background-color: #e4e4e4;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.experience h4 {
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
+.experience p {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.experience ul {
+  list-style-position: inside; /* keeps bullets inside the box */
+  padding-left: 0; /* removes default extra padding */
+  margin: 0; /* optional: removes extra margin */
+  text-align: left; /* keeps list text aligned properly */
+}
+.experience li {
+  font-size: 0.8em;
+  margin-bottom: 5px;
 }
