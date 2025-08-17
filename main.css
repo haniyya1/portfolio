@@ -193,6 +193,7 @@ img {
   margin: 10px auto;
   align-items: center;
   display: block;
+  border-radius: 30px;
 }
 
 /*cv button styling*/
@@ -294,7 +295,7 @@ main h2.projects {
 
 /* experience */
 
-/*Projects grid layout*/
+/*experience grid layout*/
 aside.experiences {
   display: grid;
   grid-template-columns: repeat(2, 30%);
@@ -329,12 +330,105 @@ aside.experiences {
 }
 
 .experience ul {
-  list-style-position: inside; /* keeps bullets inside the box */
-  padding-left: 0; /* removes default extra padding */
-  margin: 0; /* optional: removes extra margin */
-  text-align: left; /* keeps list text aligned properly */
+  list-style-position: inside;
+  /* keeps bullets inside the box */
+  padding-left: 0;
+  /* removes default extra padding */
+  margin: 0;
+  /* optional: removes extra margin */
+  text-align: left;
+  /* keeps list text aligned properly */
 }
+
 .experience li {
   font-size: 0.8em;
   margin-bottom: 5px;
+}
+
+
+/* education*/
+
+/* education grid layout*/
+aside.educations {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 20px;
+  padding: 10px 30px 50px;
+  justify-content: center;
+  margin-left: 3%;
+}
+
+.education {
+  background-color: #e4e4e4;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1; /*makes a square box*/
+ 
+}
+
+.education:nth-child(3) {
+  grid-column: 1 / span 2;   /* makes the third box span two columns */
+  justify-self: center;      
+  width: 50%;                
+}
+
+.education p {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+
+/*styling the contact form*/
+.contacts {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  padding-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact {
+  background-color: #e4e4e4;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  row-gap: 0.5em;
+  padding: 20px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+label {
+  text-align: left;
+  display: block;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  background-color: #e4e4e4;
+  border: 1px solid;
+  border-radius: 0.25em;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  box-shadow: 2px 2px 2px #000000;
 }
