@@ -2,8 +2,8 @@
 const container = document.getElementById("container");
 const skills = Array.from(document.querySelectorAll(".skill"));
 
-const SPEED = 1.1; // normal movement speed
-const BOUNCE_SPEED = 1.1; // speed after bouncing
+const SPEED = 0.5; // normal movement speed
+const BOUNCE_SPEED = 0.5; // speed after bouncing
 
 // Initialize skill data
 const skillData = skills.map(skill => {
