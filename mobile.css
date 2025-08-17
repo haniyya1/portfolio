@@ -19,6 +19,47 @@ img {
 }
 
 
+/* Center the container */
+.about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  
+  /* Box styling */
+  .about_me {
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  
+  /*cv button styling*/
+  .cv {
+    background-color: #ffffff;
+    border-radius: 0.6em;
+    text-align: center;
+    padding: 1em 1em;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+    font-size: medium;
+    margin: 2em;
+    top: 7em;
+    box-shadow: 0px 4px 12px black;
+  }
+  
+
+
 
 /*Projects page*/
 aside.projects {
