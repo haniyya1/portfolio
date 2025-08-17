@@ -1,0 +1,222 @@
+/*home page*/
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: cursive;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Image styling */
+img {
+    width: 400px;
+    height: 400px;
+    margin: 10px auto;
+    align-items: center;
+    display: block;
+}
+
+
+/*Projects page*/
+aside.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 10px 30px 50px;
+    justify-content: center;
+    margin-left: 3%;
+
+}
+
+.project {
+    background-color: #e4e4e4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project img {
+    width: 50%;
+    display: block;
+    height: auto;
+    max-height: 100px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.project h4 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
+
+.project p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+main h2.projects {
+    font-size: 1.8em;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+
+/*Skills page */
+/* Skills container */
+#container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #ffffff;
+    overflow: hidden;
+    margin: 50px auto;
+    border: 2px solid #000000;
+}
+
+/* Skill boxes */
+.skill {
+    position: absolute;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #000000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.05s linear;
+}
+
+
+/* experience page*/
+
+/*experience grid layout*/
+aside.experiences {
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 10px 30px 50px;
+    justify-content: center;
+    margin-left: 3%;
+  
+  }
+  
+  .experience {
+    background-color: #e4e4e4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .experience h4 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+  }
+  
+  .experience p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  
+  .experience ul {
+    list-style-position: inside;
+    /* keeps bullets inside the box */
+    padding-left: 0;
+    /* removes default extra padding */
+    margin: 0;
+    /* optional: removes extra margin */
+    text-align: left;
+    /* keeps list text aligned properly */
+  }
+  
+  .experience li {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  
+
+
+/* education page*/
+
+/* education grid layout*/
+aside.educations {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 20px;
+    padding: 10px 30px 50px;
+    justify-content: center;
+    margin-left: 3%;
+  }
+  
+  .education {
+    background-color: #e4e4e4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1; /*makes a square box*/
+   
+  }
+  
+  .education:nth-child(3) {
+    grid-column: 1 / span 2;   /* makes the third box span two columns */
+    justify-self: center;      
+    width: 50%;                
+  }
+  
+  .education p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  
+  .education h4 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+  }
+  
+  /* contact page*/
+aside.contacts {
+    display: grid;
+    grid-template-rows: repeat(2, 250px);
+    gap: 20px;
+    padding: 10px 30px 50px;
+    justify-content: center;
+    margin-left: 3%;
+  }
+  
+  .contact {
+    background-color: #e4e4e4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 2 / 1; 
+   
+  }
