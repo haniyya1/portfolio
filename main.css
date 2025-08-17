@@ -64,6 +64,7 @@ nav a:hover {
   box-sizing: border-box;
 }
 
+
 /* Typography */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -407,7 +408,7 @@ aside.contacts {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1 / 1; /*makes a square box*/
+  aspect-ratio: 2 / 1; 
  
 }
 
