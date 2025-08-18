@@ -1,3 +1,48 @@
+/* This is the desktop version of the website */
+/*grid layout for desktop version*/
+body {
+    background-color: #fdfdfd;
+    font-family: Arial, sans-serif;
+    margin: 80px auto;
+    padding: 30px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "main main main"
+        "aside aside aside"
+        "footer footer footer";
+}
+
+
+/*hiding the hamburger icon on the desktop page*/
+.on {
+    display: none;
+}
+
+.off {
+    display: none;
+}
+
+/*Styling navigation bar*/
+ul:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e4e4e4;
+    padding: 15px 20px;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+
+
 /*home page*/
 h1 {
     font-size: 3em;
@@ -27,10 +72,10 @@ img {
     padding: 20px;
     padding-bottom: 80px;
     text-align: center;
-  }
-  
-  /* Box styling */
-  .about_me {
+}
+
+/* Box styling */
+.about_me {
     font-size: 1.1em;
     line-height: 1.5;
     font-family: Arial, sans-serif;
@@ -39,11 +84,11 @@ img {
     max-width: 600px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-  }
-  
-  
-  /*cv button styling*/
-  .cv {
+}
+
+
+/*cv button styling*/
+.cv {
     background-color: #ffffff;
     border-radius: 0.6em;
     text-align: center;
@@ -55,8 +100,8 @@ img {
     margin: 2em;
     top: 7em;
     box-shadow: 0px 4px 12px black;
-  }
-  
+}
+
 
 
 /*Projects page*/
@@ -151,10 +196,10 @@ aside.experiences {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  
-  }
-  
-  .experience {
+
+}
+
+.experience {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -163,20 +208,20 @@ aside.experiences {
     margin: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  
-  .experience h4 {
+}
+
+
+.experience h4 {
     font-size: 1.2em;
     margin-bottom: 3px;
-  }
-  
-  .experience p {
+}
+
+.experience p {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
-  .experience ul {
+}
+
+.experience ul {
     list-style-position: inside;
     /* keeps bullets inside the box */
     padding-left: 0;
@@ -185,13 +230,13 @@ aside.experiences {
     /* optional: removes extra margin */
     text-align: left;
     /* keeps list text aligned properly */
-  }
-  
-  .experience li {
+}
+
+.experience li {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
+}
+
 
 
 /* education page*/
@@ -204,9 +249,9 @@ aside.educations {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  }
-  
-  .education {
+}
+
+.education {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -216,27 +261,29 @@ aside.educations {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1; /*makes a square box*/
-   
-  }
-  
-  .education:nth-child(3) {
-    grid-column: 1 / span 2;   /* makes the third box span two columns */
-    justify-self: center;      
-    width: 50%;                
-  }
-  
-  .education p {
+    aspect-ratio: 1 / 1;
+    /*makes a square box*/
+
+}
+
+.education:nth-child(3) {
+    grid-column: 1 / span 2;
+    /* makes the third box span two columns */
+    justify-self: center;
+    width: 50%;
+}
+
+.education p {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
-  .education h4 {
+}
+
+.education h4 {
     font-size: 1.2em;
     margin-bottom: 3px;
-  }
-  
-  /* contact page*/
+}
+
+/* contact page*/
 aside.contacts {
     display: grid;
     grid-template-rows: repeat(2, 250px);
@@ -244,9 +291,9 @@ aside.contacts {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  }
-  
-  .contact {
+}
+
+.contact {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -256,6 +303,6 @@ aside.contacts {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 2 / 1; 
-   
-  }
+    aspect-ratio: 2 / 1;
+
+}

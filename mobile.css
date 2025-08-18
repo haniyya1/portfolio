@@ -1,3 +1,114 @@
+/* This is the mobile version of the website. */
+/*grid layout for mobile version*/
+body {
+    display: grid;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+
+footer {
+    grid-column: 1 / -1;
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    padding: 20px;
+}
+
+
+/*Styling navigation bar and creating hamburger icon*/
+.hamburger {
+    position: fixed;
+    /* instead of relative */
+    top: 40px;
+    /* distance from top of viewport */
+    left: 30px;
+    /* distance from left of viewport */
+    margin: 0;
+    /* remove margin-based positioning */
+    z-index: 1000;
+    /* keep it above nav */
+}
+
+
+.hamburger a {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.showNav {
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid black;
+    border-bottom: 0.2em solid black;
+    border-radius: 0.2em;
+    position: relative;
+    padding: 0;
+}
+
+.showNav::before {
+    content: '';
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.11em;
+    border-top: 0.2em solid black;
+    padding: 0;
+}
+
+nav {
+    background-color: #e4e4e4;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 50%;
+    height: 100vh;
+    /*slide away effect for the menu*/
+    transition: transform 0.5s ease-in-out;
+    transform: translate(0, 0);
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 30px;
+}
+
+/*Toggle navigation bar*/
+#click:target nav {
+    display: block;
+    transform: translate(-100%, 0%);
+    z-index: 1;
+}
+
+#click .on {
+    display: block;
+}
+
+#click .off {
+    display: none;
+}
+
+#click:target .on {
+    display: block;
+}
+
+#click:target .off {
+    display: block;
+}
+
+
+
 /*home page*/
 h1 {
     font-size: 2em;
@@ -28,10 +139,10 @@ img {
     padding: 20px;
     padding-bottom: 80px;
     text-align: center;
-  }
-  
-  /* Box styling */
-  .about_me {
+}
+
+/* Box styling */
+.about_me {
     font-size: 1em;
     line-height: 1.5;
     font-family: Arial, sans-serif;
@@ -40,11 +151,11 @@ img {
     max-width: 600px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-  }
-  
-  
-  /*cv button styling*/
-  .cv {
+}
+
+
+/*cv button styling*/
+.cv {
     background-color: #ffffff;
     border-radius: 0.6em;
     text-align: center;
@@ -56,8 +167,8 @@ img {
     margin: 2em;
     top: 7em;
     box-shadow: 0px 4px 12px black;
-  }
-  
+}
+
 
 
 
@@ -154,10 +265,10 @@ aside.experiences {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  
-  }
-  
-  .experience {
+
+}
+
+.experience {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -166,20 +277,20 @@ aside.experiences {
     margin: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  
-  .experience h4 {
+}
+
+
+.experience h4 {
     font-size: 1.2em;
     margin-bottom: 3px;
-  }
-  
-  .experience p {
+}
+
+.experience p {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
-  .experience ul {
+}
+
+.experience ul {
     list-style-position: inside;
     /* keeps bullets inside the box */
     padding-left: 0;
@@ -188,13 +299,13 @@ aside.experiences {
     /* optional: removes extra margin */
     text-align: left;
     /* keeps list text aligned properly */
-  }
-  
-  .experience li {
+}
+
+.experience li {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
+}
+
 
 
 /* education page*/
@@ -207,9 +318,9 @@ aside.educations {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  }
-  
-  .education {
+}
+
+.education {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -219,22 +330,23 @@ aside.educations {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1; /*makes a square box*/
-   
-  }
-  
-  
-  .education p {
+    aspect-ratio: 1 / 1;
+    /*makes a square box*/
+
+}
+
+
+.education p {
     font-size: 0.8em;
     margin-bottom: 5px;
-  }
-  
-  .education h4 {
+}
+
+.education h4 {
     font-size: 1.2em;
     margin-bottom: 3px;
-  }
-  
-  /* contact page*/
+}
+
+/* contact page*/
 aside.contacts {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -242,9 +354,9 @@ aside.contacts {
     padding: 10px 30px 50px;
     justify-content: center;
     margin-left: 3%;
-  }
-  
-  .contact {
+}
+
+.contact {
     background-color: #e4e4e4;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -254,6 +366,16 @@ aside.contacts {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 2 / 1; 
-   
-  }
+    aspect-ratio: 2 / 1;
+
+}
+
+.contact p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.contact h4 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
