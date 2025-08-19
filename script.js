@@ -1,4 +1,5 @@
 //skills
+document.addEventListener("DOMContentLoaded", () => {
 const container = document.getElementById("container");
 const skills = Array.from(document.querySelectorAll(".skill"));
 
@@ -88,4 +89,7 @@ function update() {
 }
 
 update();
+
+});
+
 
