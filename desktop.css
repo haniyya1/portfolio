@@ -190,8 +190,8 @@ main h2.projects {
 /*experience grid layout*/
 aside.experiences {
     display: grid;
-    grid-template-columns: repeat(2, 30%);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     padding: 10px 30px 50px;
     justify-content: center;
