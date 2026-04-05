@@ -1,308 +1,194 @@
-/* This is the desktop version of the website */
-/*grid layout for desktop version*/
 body {
-    background-color: #fdfdfd;
-    font-family: Arial, sans-serif;
-    margin: 80px auto;
-    padding: 30px;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "nav nav nav"
-        "header header header"
-        "main main main"
-        "aside aside aside"
-        "footer footer footer";
+  margin: 0;
+  padding: 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  gap: 1.5rem;
 }
 
-
-/*hiding the hamburger icon on the desktop page*/
-.on {
-    display: none;
+.on,
+.off,
+.hamburger {
+  display: none;
 }
 
-.off {
-    display: none;
+nav {
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
 }
 
-/*Styling navigation bar*/
-ul:nth-child(1) {
-    display: flex;
-    justify-content: space-around;
-    background-color: #e4e4e4;
-    padding: 15px 20px;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    list-style-type: none;
-    text-align: center;
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem;
 }
 
+nav a {
+  padding: 0.8rem 1rem;
+}
 
-/*home page*/
+main {
+  padding: 2rem 1rem 0.5rem;
+}
+
 h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-family: cursive;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: bold;
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 0.75rem;
 }
 
-/* Image styling */
-img {
-    width: 400px;
-    height: 400px;
-    margin: 10px auto;
-    align-items: center;
-    display: block;
+h2,
+main h2.projects {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+  padding: 0;
 }
 
+main img {
+  width: 320px;
+  height: 320px;
+  margin: 1.5rem auto 0;
+}
 
-/* Center the container */
 .about_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    padding-bottom: 80px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
 }
 
-/* Box styling */
 .about_me {
-    font-size: 1.1em;
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+  max-width: 820px;
+  padding: 2rem;
+  font-size: 1.05rem;
+  text-align: left;
 }
 
-
-/*cv button styling*/
-.cv {
-    background-color: #ffffff;
-    border-radius: 0.6em;
-    text-align: center;
-    padding: 1em 1em;
-    width: 90px;
-    display: inline-block;
-    text-align: center;
-    font-size: medium;
-    margin: 2em;
-    top: 7em;
-    box-shadow: 0px 4px 12px black;
-}
-
-
-
-/*Projects page*/
 aside.projects {
-    display: grid;
-    grid-template-columns: repeat(2, 30%);
-    grid-template-rows: auto;
-    gap: 20px;
-    padding: 10px 30px 50px;
-    justify-content: center;
-    margin-left: 3%;
-
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
 }
 
 .project {
-    background-color: #e4e4e4;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    height: 100%;
+  padding: 1.5rem;
+  text-align: left;
 }
 
 .project img {
-    width: 50%;
-    display: block;
-    height: auto;
-    max-height: 100px;
-    margin-bottom: 5px;
-    object-fit: contain;
-    margin: 0 auto;
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
 }
 
-.project h4 {
-    font-size: 1.2em;
-    margin-bottom: 3px;
+.project h4,
+.experience h4,
+.education h4,
+.contact h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
 }
 
-.project p {
-    font-size: 0.8em;
-    margin-bottom: 5px;
+.project p,
+.experience p,
+.experience li,
+.education p,
+.contact p {
+  font-size: 0.98rem;
 }
 
-main h2.projects {
-    font-size: 1.8em;
-    font-family: cursive;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px 10px;
-}
-
-
-
-/*Skills page */
-/* Skills container */
 #container {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    background: #ffffff;
-    overflow: hidden;
-    margin: 50px auto;
-    border: 2px solid #000000;
+  position: relative;
+  width: min(880px, 100%);
+  height: 520px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
 }
 
-/* Skill boxes */
 .skill {
-    position: absolute;
-    padding: 10px 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    font-size: 16px;
-    white-space: nowrap;
-    color: #222;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #000000;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.05s linear;
+  position: absolute;
+  padding: 0.75rem 1.1rem;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  font-size: 0.96rem;
+  white-space: nowrap;
+  color: var(--accent-strong);
+  font-weight: 600;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+  transition: transform 0.05s linear;
 }
 
-
-/* experience page*/
-
-/*experience grid layout*/
 aside.experiences {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    padding: 10px 30px 50px;
-    justify-content: center;
-    margin-left: 3%;
-
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
 }
 
 .experience {
-    background-color: #e4e4e4;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-.experience h4 {
-    font-size: 1.2em;
-    margin-bottom: 3px;
-}
-
-.experience p {
-    font-size: 0.8em;
-    margin-bottom: 5px;
+  padding: 1.5rem;
+  text-align: left;
 }
 
 .experience ul {
-    list-style-position: inside;
-    /* keeps bullets inside the box */
-    padding-left: 0;
-    /* removes default extra padding */
-    margin: 0;
-    /* optional: removes extra margin */
-    text-align: left;
-    /* keeps list text aligned properly */
+  padding-left: 1.2rem;
+  margin-top: 0.8rem;
 }
 
 .experience li {
-    font-size: 0.8em;
-    margin-bottom: 5px;
+  margin-bottom: 0.65rem;
 }
 
-
-
-/* education page*/
-
-/* education grid layout*/
 aside.educations {
-    display: grid;
-    grid-template-columns: repeat(2, 250px);
-    gap: 20px;
-    padding: 10px 30px 50px;
-    justify-content: center;
-    margin-left: 3%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
 }
 
 .education {
-    background-color: #e4e4e4;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1 / 1;
-    /*makes a square box*/
-
+  padding: 2rem;
+  text-align: left;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .education:nth-child(3) {
-    grid-column: 1 / span 2;
-    /* makes the third box span two columns */
-    justify-self: center;
-    width: 50%;
+  grid-column: 1 / -1;
+  max-width: 520px;
+  width: 100%;
+  justify-self: center;
 }
 
-.education p {
-    font-size: 0.8em;
-    margin-bottom: 5px;
-}
-
-.education h4 {
-    font-size: 1.2em;
-    margin-bottom: 3px;
-}
-
-/* contact page*/
 aside.contacts {
-    display: grid;
-    grid-template-rows: repeat(2, 250px);
-    gap: 20px;
-    padding: 10px 30px 50px;
-    justify-content: center;
-    margin-left: 3%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
 }
 
 .contact {
-    background-color: #e4e4e4;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 2 / 1;
-
+  padding: 2rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
